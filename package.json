@@ -9,8 +9,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "backend": "nodemon index.jx",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "backend": "nodemon index.jx"
   },
   "author": "binhle",
   "license": "ISC",
