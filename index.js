@@ -13,7 +13,7 @@ mongoose.connect(config.mongoURI, {useNewUrlParser:true}).then(() => console.log
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
-app.use(cookieParser());
+app.use(cookieParser()); 
 
 
 app.get("/api/user/auth", auth, (req, res) => {
@@ -78,9 +78,11 @@ app.get("/api/user/logout", auth, (req, res) => {
 })
 
 
-app.get('/', (req, res) => {
-    res.send("Hello world!");
-});
+// app.get('/', (req, res) => {
+//     res.send("Hello world!");
+// });
+const port = process.env.PORT || 5000
+
 app.listen(5000, () =>{
-    console.log("Server running at port 5000")
+    console.log("Server running at " + port)
 });
