@@ -9,7 +9,10 @@ const config = require('./config/key');
 const {User} = require('./models/user');
 const {auth} = require('./middleware/auth')
 
-mongoose.connect(config.mongoURI, {useNewUrlParser:true}).then(() => console.log("DB connected OK")).catch(err => console.log(err));
+mongoose.connect(config.mongoURI, {useNewUrlParser:true}).then(() => console.log("DB connected OK")).catch(err => {
+    console.log("Chung ta khong thuoc ve nhau nua 2020")
+    console.log(err)});
+    console.log("Chung ta khong thuoc ve nhau nua 2019")
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
